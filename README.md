@@ -337,7 +337,7 @@ ns3.digitalocean.com
 ![alt text](https://i.imgur.com/WjaCfSI.png)
 
 - It may take anywhere from 5 minutes to 24 hours to go into effect, but you check if you domain is connected through the following website:
-https://check-host.net/
+    - https://check-host.net/
     - Every project/domain/website is different, but I like to check my domain with and without the 'www' in front
 
 ##### You will see Digital Ocean listed:
