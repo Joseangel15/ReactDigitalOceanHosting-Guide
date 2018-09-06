@@ -1,13 +1,11 @@
 # Guide - The React to Digital Ocean Hosting Guide
 ### Hosting a React project as a website with Digital Ocean(HTTPS)
-#### By Kevin Greenhill
-
-#### Check out my portfolio @ https://kevingreenhill.com
+#### By Kevin Greenhill - Check out my portfolio @ https://kevingreenhill.com
 
 ## About
-- By the end of this guide you should have a working, hosted website with a domain name and HTTPS, that you can edit when needed.
-#### Goal: 
-While attending DevMountain boot camp, I noticed several students struggled with getting their website hosted and ended up using acombo multiple guides. I hosted my first project after many other students so I was given the right guide to use and had little problems. While the guide worked well for me, I did end up having to use two different ones, no big deal. I recently went to host a project for the first time in a long time and went to open those guides...GONE! Using a couple I found from DevMountain and one from a UK hosting website, I managed to patch together a hosted site. But that was after quite some time and frequent website tab switching. This was my inspiration to write *The React to Digital Ocean Hosting Guide*.
+#### By the end of this guide you should have a working, hosted website with a domain name and HTTPS, that you can edit when needed.
+### Goal: 
+#### While attending DevMountain boot camp, I noticed several students struggled with getting their website hosted and ended up using acombo multiple guides. I hosted my first project after many other students so I was given the right guide to use and had little problems. While the guide worked well for me, I did end up having to use two different ones, no big deal. I recently went to host a project for the first time in a long time and went to open those guides...GONE! Using a couple I found from DevMountain and one from a UK hosting website, I managed to patch together a hosted site. But that was after quite some time and frequent website tab switching. This was my inspiration to write *The React to Digital Ocean Hosting Guide*.
 ##### TLDR: Had difficult time hosting sites, used multiple guides at once, best guide deleted, inspired to compile into one guide - *The React to Digital Ocean Hosting Guide*.
 
 <details> 
