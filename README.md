@@ -299,6 +299,7 @@ app.get('*', (req, res)=>{
 - Nav to project: `cd PROJECTFOLDER` 
 - Fetch your commit(s): `git fetch` 
 - Pull commit(s): `git pull` 
+- Create a new build folder: `npm run build`
 - Restart pm2: `pm2 restart all`
 
 
