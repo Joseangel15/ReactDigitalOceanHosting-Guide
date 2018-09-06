@@ -295,9 +295,11 @@ app.get('*', (req, res)=>{
 
 ##### *If you need to change your *.env* folder, make sure to run `npm run build` so everything is updated
 ##### TLDR: 
-```
-Connect to droplet: ssh root@IPADDRESS, nav to project: cd PROJECTFOLDER, fetch your commit(s): git fetch, pull commit(s): git pull, restart pm2: pm2 restart all
-```
+- Connect to droplet: `ssh root@IPADDRESS` 
+- Nav to project: `cd PROJECTFOLDER` 
+- Fetch your commit(s): `git fetch` 
+- Pull commit(s): `git pull` 
+- Restart pm2: `pm2 restart all`
 
 
 ***
