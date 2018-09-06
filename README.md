@@ -343,3 +343,82 @@ ns3.digitalocean.com
 ##### You will see Digital Ocean listed:
 ![alt text](https://i.imgur.com/FTGmLo6.png)
 
+## Step 3: Setting up the domain with nginx
+##### There are two ways I currently know of to do this, one uses a form/formula to generate the needed code & the other is entering code in manually
+1. Fill out the form accordingly, *make sure to add two domains, one with 'www'*
+1. Enter in the original port number your site was hosted with, the one attached to the end of your Digital Ocean IP Address that created your websites first URL
+1. For *Project* use the name from your project's package.json folder
+1. The code will automatically generate, click the *copy* button and open your terminal up
+1. If you are not in your droplet already, open it up - `ssh root@YOURIPADDRESSHERE`
+1. Type `ls` to figure where you are. You should be right above your projects directory(only your project's folder is visible)
+1. If so, navigate up one more level: `cd ..` Type `ls` again and you should see multiple folders, but more importantly an *etc* folder
+1. If everything is looking correct you can now run the command: `cd /etc/nginx/sites-available`
+1. Type in `ls` one more time and you should only see a *default* file
+    - You can either use the *default* file to run nginx with your project or you can create seperate files for each project
+    
+### Way 1 - Generate the code
+- DevMountain, the coding boot camp I went to, has created a simple application to help you formulate the needed nginx code
+    - https://devmountain.github.io/Host-Helper/
+##### The DevMountain Host Helper:
+![alt text](https://i.imgur.com/GynaN42.png)
+
+1. Now you are going to want to paste the copied code from the Host Helper and press *enter* if it does not automatically run
+1. You will be prompted for *an email address* to *agree or disagree* with the terms, whether you'd *share your email address* and to *redirect HTTP traffic*
+##### *It is important to select *2* for the *redirect HTTP traffic* question to make your website HTTPS
+1. Head back to the DevMountain Host Helper and at the bottom of the left-hand side pretty the second *copy* button
+1. Paste this code into your terminal
+1. Check the nginx configuration is working properly with: `sudo nginx -t`
+1. Finally, restart nginx with the command: `sudo service nginx restart`
+1. You should be good to go! Check your website in your browser to make sure everything is up and running correctly
+##### Generated code from DevMountain Host Helper:
+![alt text](https://i.imgur.com/O8jyi1O.png)
+- Your website should now work with HTTPS and your domain name
+- If you have errors, double check https://check-host.net and make sure you are connect to Digital Ocean
+- If you still have errors, check that all the code is matching up in `/etc/nginx/sites-available`
+    - If all that code looks ok, open the default file with `nano default` and delete all it's contents by holding `Ctrl + k`. Save test nginx and restart it.
+
+### Way 2 - Manually enter the code   
+- Replacing the Default file's code
+1. We will edit the default file by using: `nano default`
+1. Remove all the code by hold `Ctrl + k` until it is all cleared, type `Ctrl + x` then `y` and press *enter* to save and exit
+1. Now paste the following snippet into the *default* file
+```
+server {
+    listen 80; 
+
+    server_name your_project_domain(s).com; *DELETE-domain name here-THIS*
+
+    location / {
+        proxy_pass http://127.0.0.1:3001; *DELETE-port number here-THIS*
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+- Replace the *server_name* line with your domain name(delete both comments)
+- Replace just the port portion, NOT the IP, of *proxy_pass* with your port number
+1. Once everything is replaced with your own code, save and exit
+1. If you are exited out of the *default* file, test nginx with: `sudo nginx -t` and if that is successful restart with: `sudo service nginx restart`
+1. You webpage should be working, you can test everything by running node with your server file or by navigating to the domain name in your browser
+- If have errors, check that all the code is matching up in `/etc/nginx/sites-available`
+- If errors persist, try either deleting and pasting the code back into *default* or try it in a new file for the specific project using: `touch PROJECTNAMEHERE`
+##### Example nginx file:
+```
+server {
+    listen 80;
+
+    server_name  kevingreenhill.com www.kevingreenhill.com;
+
+  location / {
+      proxy_pass http://127.0.0.1:3026;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection upgrade;
+      proxy_set_header Host $host;
+      proxy_cache_bypass $http_upgrade;
+  }
+
+```
