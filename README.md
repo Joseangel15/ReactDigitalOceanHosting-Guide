@@ -309,9 +309,10 @@ app.get('*', (req, res)=>{
 1. In the input box under *Add a domain* enter in your domain name, to the right select your project, and click *Add Domain*
 1. If you don't see *Create new record* click on your domain name which will take you to the domains settings
 1. Under *Create new record* create the two following records:
+```
 *HOSTNAME:* `@`,  *WILL DIRECT TO:* Select your IP Address, *TTL:* Leave default
 *HOSTNAME:* `www`,  *WILL DIRECT TO:* Select your IP Address, *TTL:* Leave default
-
+```
 
 
 
