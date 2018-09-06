@@ -302,10 +302,12 @@ app.get('*', (req, res)=>{
 - GoDaddy
 ##### Currently the only hosting company I have used. The others are most likely a similar process.
 
-1. If you do not have one already, log on to Go Daddy and purchase your desired domain name
+### Part 1: Adding domain to Digital Ocean
+1. If you do not have one already, log on to GoDaddy and purchase your desired domain name
 1. Make sure to open your browser and log in to your Digital Ocean account
 1. Once on the control panel click on Networking on the right-hand side
 ![alt text](https://i.imgur.com/19lzmnZ.png)
+
 1. In the input box under *Add a domain* enter in your domain name, to the right select your project, and click *Add Domain*
 1. If you don't see *Create new record* click on your domain name which will take you to the domains settings
 1. Under *Create new record* create the two following records:
@@ -313,8 +315,31 @@ app.get('*', (req, res)=>{
 HOSTNAME: @,  WILL DIRECT TO: Select your IP Address, TTL: Leave default
 HOSTNAME: www,  WILL DIRECT TO: Select your IP Address, TTL: Leave default
 ```
+- *Both should be A records
 
+##### In the image below a 'www' record is being created and a '@' record was already created
+![alt text](https://i.imgur.com/P8kJru2.png)
 
+### Step 2: Pointing Digital Ocean to GoDaddy
+1. Head back to the GoDaddy website and pull up the *Domain Manager*
+1. Click on your domain name, scroll down to *Additional Settings* and click on *Manage DNS*
+![alt text](https://i.imgur.com/oO2Fvab.png)
 
+1. Go to the second section called *Nameservers* and click on *Change* to change from default to custom
+1. Once on custom add the three following nameservers(You will likely have to press *Add Nameserver* for the third):
+```
+ns1.digitalocean.com
+ns2.digitalocean.com
+ns3.digitalocean.com
+```
 
+1. Save the changes and your page should look like this:
+![alt text](https://i.imgur.com/WjaCfSI.png)
+
+- It may take anywhere from 5 minutes to 24 hours to go into effect, but you check if you domain is connected through the following website:
+https://check-host.net/
+    - Every project/domain/website is different, but I like to check my domain with and without the 'www' in front
+
+##### You will see Digital Ocean listed:
+![alt text](https://i.imgur.com/FTGmLo6.png)
 
