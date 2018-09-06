@@ -86,9 +86,9 @@ cat ~/.ssh/id_dsa.pub
 ```
 ssh-rsa XXXXZ3NzaC1yc2EAAAADAQABAAABAQDlVwQDt4O7Hy4jyc2Yg5usW0kat5wsOoz9tZXUef
 rv2CSsnqUOypWH3k8MPDPhgmVLmvSUP8dNfeiMjAQ+Bs/7b9Uwt2B1rkHcIyPI1F1+5Ajc/PWeHWGM
-foJZhMV/BprXwOAiAP/bMztHGTOyctsEW1fwBfcjO8lWJQ9Yf2xsZWpeuzwSHW9WMqrrN57DX2dfrC8L8C/3uBhM
-eoM9O54vpQm4XxPggBXK01yQdj6zcnUJDigEanxNi4lHva0qRmc5+ZWrlk4t3IROpqOWZfe3Yvr9qagmSYMfnf
-/ YOUREMAILLADDRESS@gmail.com
+foJZhMV/BprXwOAiAP/bMztHGTOyctsEW1fwBfcjO8lWJQ9Yf2xsZWpeuzwSHW9WMqrrN57DX2dfrC
+8L8C/3uBhMeoM9O54vpQm4XxPggBXK01yQdj6zcnUJDigEanxNi4lHva0qRmc5+ZWrlk4t3IROpqOW
+Zfe3Yvr9qagmSYMfnf/ YOUREMAILLADDRESS@gmail.com
 ```
 
 1. Now open up the Digital Ocean control panel and click on the New SSH Key button
@@ -108,18 +108,20 @@ eoM9O54vpQm4XxPggBXK01yQdj6zcnUJDigEanxNi4lHva0qRmc5+ZWrlk4t3IROpqOWZfe3Yvr9qagm
 ssh root@YOURIPADDRESSHERE
 ```
 1. Enter your password when prompted
-1. Now we will install the needed software which can be done in very quickly one step() or you can follow along with the breakdown
+1. Now we will install the needed software which can be done in very quickly one step() or you can follow along with the *breakdown*
 1. For a quick copy and paste:
 ```
 touch /swapfile;fallocate -l 1G /swapfile;chmod 600 /swapfile;mkswap /swapfile;swapon /swapfile;sudo add-apt-repository ppa:certbot/certbot -y;apt-get update -y && apt-get dist-upgrade -y; sudo apt-get install python-certbot-nginx -y; apt-get install nodejs -y;apt-get install npm -y;npm i -g n;n stable;npm i -g npm;npm i -g pm2;apt-get install nginx -y;npm i -g yarn;
 ```
 
-1. To follow the break down:
+1. To follow the *breakdown*:
 
 ##### Installation Breakdown
-- Create and set up a swapfile:
+***
 
-(Helps extend project memory) 
+## - Create and set up a swapfile:
+##### Helps extend your project's memory through the swapping of temp files
+
 ```
 touch /swapfile
 fallocate -l 1G /swapfile;
@@ -135,14 +137,14 @@ swapoff /swapfile
 swapon /swapfile
 ```
 
-- Install Node:
+## - Install Node:
 1. Update the software with the commands: `apt-get update && apt-get dist-upgrade`
 1. Install Node using: `apt-get install nodejs -y; apt-get install npm -y;`
 1. Globally install n: `npm i -g n;`
 1. Update to latest stable version: `n stable;`
 1. Install lastest version of Node: `npm i -g npm;`
 
-- Add Certbot
+## - Add Certbot
 
 ##### Helps automate certficates - makes droplet uses https
 
@@ -152,17 +154,21 @@ sudo add-apt-repository ppa:certbot/certbot -y
 sudo apt-get install python-certbot-nginx-y
 ```
 
-- Install pm2
+## - Install pm2
 
 ##### pm2 is a program that keeps your website's server continuously running
 
 1. Type in your terminal: `npm i -g pm2`
 
-- Install nginx
+## - Install nginx
 
 ##### Helps configure what domains and ports match up on your server
 
 1. Type in the command: `apt-get install nginx -y`
+
+
+
+***
 
 
 
