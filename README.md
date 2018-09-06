@@ -39,13 +39,13 @@
 5. Now click on the Create drop down button on at the very top of your screen(on the right hand-ish side) and select Droplets
 6. Leave the Choose an image option as the default(Ubuntu), scroll down and choose your desired size
 
-##### Default image Ubuntu
-![alt text](https://i.imgur.com/dKIQiAx.png)
+##### Default image Ubuntu:
+![alt text](https://i.imgur.com/zpC9ejm.png)
 
 7. Next scroll down some more to the Choose a datacenter region section and choose the best location for you
 8. Finally, scroll down a little more to Add your SSH keys and stop here. We will leave this open and finish in in the next section
 
-##### Add your SSH Keys, stopping point
+##### Add your SSH Keys, stopping point:
 ![alt text](https://i.imgur.com/dKIQiAx.png)
 
 
