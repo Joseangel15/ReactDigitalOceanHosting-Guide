@@ -18,6 +18,7 @@
 
 ###### Have credit card/payment details ready
 
+
 1. Navigation to www.digitalocean.com
 1. Enter an email & password OR follow the prompt and sign up with Google
 1. From your email account, confirm your new Digital Ocean account
@@ -28,9 +29,12 @@
 ##### Digital Ocean Control Panel:
 ![alt text](https://i.imgur.com/sZ6eOsL.png)
 
+
 ***
 
+
 ## Create a project & droplet with Digital Ocean
+
 
 1. On the left hand side of the screen click on: + New Project
 2. Fill out the input(Name, Description, Purpose) and click Create Project
@@ -42,6 +46,7 @@
 ##### Default image Ubuntu:
 ![alt text](https://i.imgur.com/zpC9ejm.png)
 
+
 7. Next scroll down some more to the Choose a datacenter region section and choose the best location for you
 8. Finally, scroll down a little more to Add your SSH keys and stop here. We will leave this open and finish in in the next section
 
@@ -49,13 +54,17 @@
 ![alt text](https://i.imgur.com/OKHFmxg.png)
 
 
+
 ***
+
 
 ## Create a SSH Key
 
 ##### SSH Keys are generated once per computer, only create one if you've never have before or had a key you know needs to be replaced
 
+
 1. Check first if you have a key
+
 ```
 cd ~/.ssh
 ls
