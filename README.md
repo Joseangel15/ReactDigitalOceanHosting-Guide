@@ -244,10 +244,10 @@ app.get('*', (req, res)=>{
 ![alt text](https://i.imgur.com/1z7uv66.png)
 
 - Other pm2 commands:
-- Restart all instances: `pm2 restart all`
-- Restart a specific instance: `pm 2 restart PROJECTID`
-- Display all instances: `pm2 list`
-- Stop all instances: `pm2 stop all`
+    - Restart all instances: `pm2 restart all`
+    - Restart a specific instance: `pm 2 restart PROJECTID`
+    - Display all instances: `pm2 list`
+    - Stop all instances: `pm2 stop all`
 
 
 
