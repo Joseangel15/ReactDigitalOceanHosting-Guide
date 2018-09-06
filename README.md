@@ -356,7 +356,7 @@ ns3.digitalocean.com
 1. Type in `ls` one more time and you should only see a *default* file
     - You can either use the *default* file to run nginx with your project or you can create seperate files for each project
     
-### Way 1 - Generate the code
+### Method 1 - Generate the code
 - DevMountain, the coding boot camp I went to, has created a simple application to help you formulate the needed nginx code
     - https://devmountain.github.io/Host-Helper/
 ##### The DevMountain Host Helper:
@@ -377,7 +377,8 @@ ns3.digitalocean.com
 - If you still have errors, check that all the code is matching up in `/etc/nginx/sites-available`
     - If all that code looks ok, open the default file with `nano default` and delete all it's contents by holding `Ctrl + k`. Save test nginx and restart it.
 
-### Way 2 - Manually enter the code   
+### Method 2 - Manually enter the code   
+#### *Just a friendly warning: I have only been able to get this method to work for me once. I recommend using the *FIRST METHOD* above, for now.
 - Replacing the Default file's code
 1. We will edit the default file by using: `nano default`
 1. Remove all the code by hold `Ctrl + k` until it is all cleared, type `Ctrl + x` then `y` and press *enter* to save and exit
