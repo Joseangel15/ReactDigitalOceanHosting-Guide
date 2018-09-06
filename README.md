@@ -8,8 +8,8 @@
 - Check/Install proper software to droplet
 - Prep project folders & files
 - Create a clone of project
-- Add environment variables on droplet
-- Install NPM & run build
+- Install npm & add environment variables on droplet
+- Create a build folder
 - Configure pm2
 
 ***
@@ -198,6 +198,58 @@ app.get('*', (req, res)=>{
 
 
 ***
+
+## Clone project
+##### Double check to make sure your project is saved and up to date on GitHub
+
+1. Open your terminal back up and if it isn't already open type: `ssh root@YOURIPADDRESSHERE` to reconnect to your droplet
+1. Install Git: `sudo apt-get install git`
+1. Now clone your project with Git: `git clone URLTOYOURGITHUBPROJECT`
+
+##### Example URL for a GitHub project:
+![alt text](https://i.imgur.com/NOUSZqP.png)
+
+***
+
+## Install npm & add .env
+1. Type `ls` to see if your project folder is there, if it is `cd` into it
+1. Now install npm: `npm install`
+1. Create environment variables: 
+- Create an .env file: `touch .env` 
+- Edit your .env file: `nano .env`
+1. Open open your project and copy the contents from your .env file and paste it into your terminal
+##### If you are using any *http://localhost:3000/WHATEVER/ELSE* replace with relative paths: */WHATEVER/ELSE*
+##### I like to have a port for my local project and my hosted project. It's totally option but I like to add either a port or change the name in my droplet's env file. Ex) *HOST_PORT=80*
+
+- Press *Ctrl + x* to exit the .env file, *y* or *yes* to save and press Enter to exit  
+
+***
+
+## Create a build folder
+1. Now create a build folder: `npm run build` OR `npm build`
+1. Test to make sure your project is working by running node in your server file. Ex) `node server/server.js` -  Use `ls` if you are having trouble. 
+1. Open your browser and enter in your droplets IP address + :YOURPORT Ex) `138.68.247.223:8000`
+![alt text](https://i.imgur.com/XRyNj9Q.png)
+##### If you have errors you cannot figure out, I recommend double checking the code in your server file(especially the copied code from this guide) and if necessary run `npm run build` over again
+
+***
+
+## Configure pm2
+
+##### Make sure you are in the upper most folder of your project
+
+1. Using the same file path you tested with node a few steps earlier, start pm2 by typing  `pm2 start YOURSERVERFILEPATH` Ex) `pm2 start server/server.js`
+1. A row with columns should pop up and then you will be good to go, your website is continuously running
+##### Example of the row w/columns from pm2:
+![alt text](https://i.imgur.com/1z7uv66.png)
+
+- Other pm2 commands:
+- Restart all instances: `pm2 restart all`
+- Restart a specific instance: `pm 2 restart PROJECTID`
+- Display all instances: `pm2 list`
+- Stop all instances: `pm2 stop all`
+
+
 
 
 
