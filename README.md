@@ -4,7 +4,7 @@
 ###### Hosting a project
 - Sign Up for a Digital Ocean account
 - Create a Digital Ocean project & droplet
-- Create a SSH key
+- Create a SSH key & Add to Droplet
 - Check/Install proper software to droplet
 - Prep project folders & files
 - Create a clone of project
@@ -18,7 +18,6 @@
 
 ###### Have credit card/payment details ready
 
-
 1. Navigation to www.digitalocean.com
 1. Enter an email & password OR follow the prompt and sign up with Google
 1. From your email account, confirm your new Digital Ocean account
@@ -29,12 +28,9 @@
 ##### Digital Ocean Control Panel:
 ![alt text](https://i.imgur.com/sZ6eOsL.png)
 
-
 ***
 
-
 ## Create a project & droplet with Digital Ocean
-
 
 1. On the left hand side of the screen click on: + New Project
 2. Fill out the input(Name, Description, Purpose) and click Create Project
@@ -46,7 +42,6 @@
 ##### Default image Ubuntu:
 ![alt text](https://i.imgur.com/zpC9ejm.png)
 
-
 7. Next scroll down some more to the Choose a datacenter region section and choose the best location for you
 8. Finally, scroll down a little more to Add your SSH keys and stop here. We will leave this open and finish in in the next section
 
@@ -54,19 +49,117 @@
 ![alt text](https://i.imgur.com/OKHFmxg.png)
 
 
-
 ***
 
-
-## Create a SSH Key
+## Create a SSH Key & Add to Droplet
 
 ##### SSH Keys are generated once per computer, only create one if you've never have before or had a key you know needs to be replaced
 
-
-1. Check first if you have a key
-
+1. Open up your Git terminal
+1. Check first if you have a key:
 ```
 cd ~/.ssh
 ls
 ```
+
+1. Look for id_rsa.pub OR id_dsa.pub. If you do not see either, continue to the next step to create one.
+1. Using your Git/GitHub email address type the following command(caps not necessary):
+```
+ssh-keygen -t rsa -C "YOUREMAILADDRESSHERE@email.com"
+```
+
+1. You will be prompted to add a password or not. If you choose a password, it is important you do not forget this!!
+1. Once you have finshed creating your SSH key and password, try typing the first command below & second if the first does not work:
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+OR
+
+```
+cat ~/.ssh/id_dsa.pub
+```
+
+1. In your terminal a long key will appear, copy your SSH key starting at ssh- and ending with the email address
+
+##### Example:
+```
+ssh-rsa XXXXZ3NzaC1yc2EAAAADAQABAAABAQDlVwQDt4O7Hy4jyc2Yg5usW0kat5wsOoz9tZXUefrv2CSsnqUOypWH3k8MPDPhgmVLmvSUP8dNfeiMjAQ+Bs/7b9Uwt2B1rkHcIyPI1F1I4N+5Ajc/PWeHWGMfoJZhMV/BprXwOAiAP/bMztHGTOyctsEW1fwBfcjO8lWJQ9Yf2xsZWpeuzwSHW9WMqrrN57DX2dfrC8L8C/3uBhMeoM9O54vpQm4XxPggBXK01yQdj6zcnUJDigEanxNi4lHva0qRmc5+ZWrlk4t3IROpqOWZfe3Yvr9qagmSYMfnf/ YOUREMAILLADDRESS@gmail.com
+```
+
+1. Now open up the Digital Ocean control panel and click on the New SSH Key button
+1. Paste in your key and give it a name
+1. Make sure only 1 Droplet is selected below, give droplet a name, select the project created earlier and then click Create
+1. On the Digital Ocean control panel, your project should be select and you should see your droplet name and an IP address
+1. Copy the IP address and move on to the next section
+
+##### Example IP address:
+![alt text](https://i.imgur.com/PgW4Qoc.png)
+
+
+## Installing the proper software in droplet
+
+1. Open your Git terminal back up and type `ssh root@YOURIPADDRESSHERE`:
+```
+ssh root@YOURIPADDRESSHERE
+```
+1. Enter your password when prompted
+1. Now we will install the needed software which can be done in very quickly one step() or you can follow along with the breakdown
+1. For a quick copy and paste:
+`touch /swapfile;fallocate -l 1G /swapfile;chmod 600 /swapfile;mkswap /swapfile;swapon /swapfile;sudo add-apt-repository ppa:certbot/certbot -y;apt-get update -y && apt-get dist-upgrade -y; sudo apt-get install python-certbot-nginx -y; apt-get install nodejs -y;apt-get install npm -y;npm i -g n;n stable;npm i -g npm;npm i -g pm2;apt-get install nginx -y;npm i -g yarn;`
+
+1. To follow the break down:
+
+##### Installation Breakdown
+- Create and set up a swapfile:
+
+(Helps extend project memory) 
+```
+touch /swapfile
+fallocate -l 1G /swapfile;
+chmod 600 /swapfile;
+mkswap /swapfile;
+swapon /swapfile;
+````
+
+1. If a *fallocate* error occurred, turn the swapfile off then on and try entering in the previous commands starting with `fallocate -l 1G /swapfile;` 
+1. You can turn your swapfile on or off using either of the following commands
+```
+swapoff /swapfile
+swapon /swapfile
+```
+
+- Install Node:
+1. Update the software with the commands: `apt-get update && apt-get dist-upgrade`
+1. Install Node using: `apt-get install nodejs -y; apt-get install npm -y;`
+1. Globally install n: `npm i -g n;`
+1. Update to latest stable version: `n stable;`
+1. Install lastest version of Node: `npm i -g npm;`
+
+- Add Certbot
+
+##### Helps automate certficates - makes droplet uses https
+
+1. Type in these two commands in order:
+```
+sudo add-apt-repository ppa:certbot/certbot -y
+sudo apt-get install python-certbot-nginx-y
+```
+
+- Install pm2
+
+##### pm2 is a program that keeps your website's server continuously running
+
+1. Type in your terminal: `npm i -g pm2`
+
+- Install nginx
+
+##### Helps configure what domains and ports match up on your server
+
+1. Type in the command: `apt-get install nginx -y`
+
+
+
+
+
 
