@@ -306,6 +306,11 @@ app.get('*', (req, res)=>{
 1. Make sure to open your browser and log in to your Digital Ocean account
 1. Once on the control panel click on Networking on the right-hand side
 ![alt text](https://i.imgur.com/19lzmnZ.png)
+1. In the input box under *Add a domain* enter in your domain name, to the right select your project, and click *Add Domain*
+1. If you don't see *Create new record* click on your domain name which will take you to the domains settings
+1. Under *Create new record* create the two following records:
+*HOSTNAME:* `@`,  *WILL DIRECT TO:* Select your IP Address, *TTL:* Leave default
+*HOSTNAME:* `www`,  *WILL DIRECT TO:* Select your IP Address, *TTL:* Leave default
 
 
 
