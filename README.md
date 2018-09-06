@@ -292,7 +292,8 @@ app.get('*', (req, res)=>{
 1. Make sure to restart pm2: `pm2 restart all` OR `pm2 restart PROJECTID`
 
 ##### *If you need to change your *.env* folder, make sure to run `npm run build` so everything is updated
-##### TLDR Connect to droplet: `ssh root@IPADDRESS`, nav to project: `cd PROJECTFOLDER`, fetch your commit(s): `git fetch`, pull commit(s): `git pull`, restart pm2: `pm2 restart all`
+### TLDR: 
+##### Connect to droplet: `ssh root@IPADDRESS`, nav to project: `cd PROJECTFOLDER`, fetch your commit(s): `git fetch`, pull commit(s): `git pull`, restart pm2: `pm2 restart all`
 
 
 ***
