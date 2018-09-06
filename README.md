@@ -49,6 +49,15 @@
 ![alt text](https://i.imgur.com/dKIQiAx.png)
 
 
+***
 
+## Create a SSH Key
 
+##### SSH Keys are generated once per computer, only create one if you've never have before or had a key you know needs to be replaced
+
+1. Check first if you have a key
+```
+cd ~/.ssh
+ls
+```
 
