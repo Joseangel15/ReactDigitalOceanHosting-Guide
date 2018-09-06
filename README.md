@@ -4,15 +4,15 @@
 
 ## About
 <details>
-<summary>Goal:</summary>   
+<summary>Goal</summary>   
 While attending DevMountain boot camp, I noticed several students struggled with getting their website hosted and ended up using acombo multiple guides. I hosted my first project after many other students so I was given the right guide to use and had little problems. While the guide worked well for me, I did end up having to use two different ones, no big deal. I recently went to host a project for the first time in a long time and went to open those guides...GONE! Using a couple I found from DevMountain and one from a UK hosting website, I managed to patch together a hosted site. But that was after quite some time and frequent website tab switching. This was my inspiration to write *The React to Digital Ocean Hosting Guide*.
 <details>
-    <summary>TLDR:</summary>   
+    <summary>TLDR</summary>   
         - Had difficult time hosting sites, used multiple guides at once, best guide deleted, inspired to compile into one guide - *The React to Digital Ocean Hosting Guide*.
     </details>
 </details>
 
-#### By the end of this guide you should have a working, hosted website with a domain name and HTTPS, that you can edit when needed.
+### *By the end of this guide you should have a working, hosted website with a domain name and HTTPS, that you can edit when needed.
 
 <details> 
 <summary>A guide for hosting a ReactJS project using Digital Ocean services. In this guide users will learn:</summary> 
