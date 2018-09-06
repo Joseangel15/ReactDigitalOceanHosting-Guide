@@ -84,7 +84,11 @@ cat ~/.ssh/id_dsa.pub
 
 ##### Example:
 ```
-ssh-rsa XXXXZ3NzaC1yc2EAAAADAQABAAABAQDlVwQDt4O7Hy4jyc2Yg5usW0kat5wsOoz9tZXUefrv2CSsnqUOypWH3k8MPDPhgmVLmvSUP8dNfeiMjAQ+Bs/7b9Uwt2B1rkHcIyPI1F1I4N+5Ajc/PWeHWGMfoJZhMV/BprXwOAiAP/bMztHGTOyctsEW1fwBfcjO8lWJQ9Yf2xsZWpeuzwSHW9WMqrrN57DX2dfrC8L8C/3uBhMeoM9O54vpQm4XxPggBXK01yQdj6zcnUJDigEanxNi4lHva0qRmc5+ZWrlk4t3IROpqOWZfe3Yvr9qagmSYMfnf/ YOUREMAILLADDRESS@gmail.com
+ssh-rsa XXXXZ3NzaC1yc2EAAAADAQABAAABAQDlVwQDt4O7Hy4jyc2Yg5usW0kat5wsOoz9tZXUef
+rv2CSsnqUOypWH3k8MPDPhgmVLmvSUP8dNfeiMjAQ+Bs/7b9Uwt2B1rkHcIyPI1F1+5Ajc/PWeHWGM
+foJZhMV/BprXwOAiAP/bMztHGTOyctsEW1fwBfcjO8lWJQ9Yf2xsZWpeuzwSHW9WMqrrN57DX2dfrC8L8C/3uBhM
+eoM9O54vpQm4XxPggBXK01yQdj6zcnUJDigEanxNi4lHva0qRmc5+ZWrlk4t3IROpqOWZfe3Yvr9qagmSYMfnf
+/ YOUREMAILLADDRESS@gmail.com
 ```
 
 1. Now open up the Digital Ocean control panel and click on the New SSH Key button
@@ -106,7 +110,9 @@ ssh root@YOURIPADDRESSHERE
 1. Enter your password when prompted
 1. Now we will install the needed software which can be done in very quickly one step() or you can follow along with the breakdown
 1. For a quick copy and paste:
-`touch /swapfile;fallocate -l 1G /swapfile;chmod 600 /swapfile;mkswap /swapfile;swapon /swapfile;sudo add-apt-repository ppa:certbot/certbot -y;apt-get update -y && apt-get dist-upgrade -y; sudo apt-get install python-certbot-nginx -y; apt-get install nodejs -y;apt-get install npm -y;npm i -g n;n stable;npm i -g npm;npm i -g pm2;apt-get install nginx -y;npm i -g yarn;`
+```
+touch /swapfile;fallocate -l 1G /swapfile;chmod 600 /swapfile;mkswap /swapfile;swapon /swapfile;sudo add-apt-repository ppa:certbot/certbot -y;apt-get update -y && apt-get dist-upgrade -y; sudo apt-get install python-certbot-nginx -y; apt-get install nodejs -y;apt-get install npm -y;npm i -g n;n stable;npm i -g npm;npm i -g pm2;apt-get install nginx -y;npm i -g yarn;
+```
 
 1. To follow the break down:
 
