@@ -46,7 +46,7 @@
 8. Finally, scroll down a little more to Add your SSH keys and stop here. We will leave this open and finish in in the next section
 
 ##### Add your SSH Keys, stopping point:
-![alt text](https://i.imgur.com/dKIQiAx.png)
+![alt text](https://i.imgur.com/OKHFmxg.png)
 
 
 ***
