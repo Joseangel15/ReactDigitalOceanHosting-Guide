@@ -173,9 +173,32 @@ sudo apt-get install python-certbot-nginx-y
 
 ## Prepare project folder & files
 
+1. In your package.json file if there is a *homepage* value, remove it
+1. Replace any absolute paths with environment variables.
+##### Example: `src="http://localhost:3000/information"` ===> `src={process.env.REACT_APP_SITE_INFO}`
 1. When I create a React project, one of the first things I do is remove the *registerServiceWorker()*
 ##### If you haven't already, remove any *registerServiceWorker()* and delete the actual service worker file:
 ![alt text](https://i.imgur.com/MPbZcxN.png)
+1. Make sure all the correct files/folders are in your gitignore, save everything, commit and push any new changes to GitHub
+1. Now that everything is up to date, make sure you project still works locally(yarn start, npm start)
+1. If everything is good, shut down your local server and create a build folder: `npm run build OR yarn run build`
+1. Open your server file, copy & paste the code below to tell Express to point to the build folder when running your project:
+```
+app.use( express.static( `${__dirname}/../build` ) );
+```
+##### If you are using React Router paste in the code below(towards the top of the file) to ensure everything runs properly:
+```
+const path = require('path'); 
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});
+```
+![alt text](https://i.imgur.com/dbvxoFi.png)
+
+
+***
+
 
 
 
