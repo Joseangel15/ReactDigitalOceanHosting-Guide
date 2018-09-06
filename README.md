@@ -218,8 +218,8 @@ app.get('*', (req, res)=>{
 - Create an .env file: `touch .env` 
 - Edit your .env file: `nano .env`
 1. Open open your project and copy the contents from your .env file and paste it into your terminal
-##### If you are using any `*http://localhost:3000/WHATEVER/ELSE*` replace with relative paths: `*/WHATEVER/ELSE*`
-##### I like to have a port for my local project and my hosted project. It's totally option but I like to add either a port or change the name in my droplet's env file. Ex) *HOST_PORT=80*
+##### If you are using any `http://localhost:3000/WHATEVER/ELSE` replace with relative paths: `/WHATEVER/ELSE`
+##### I like to have a port for my local project and my hosted project. It's totally option but I like to add either a port or change the name in my droplet's env file. Ex) `HOST_PORT=80`
 
 - Press *Ctrl + x* to exit the .env file, *y* or *yes* to save and press Enter to exit  
 
