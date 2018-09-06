@@ -3,7 +3,7 @@
 ## Table of Contents
 ###### Hosting a project
 - Sign Up for a Digital Ocean account
-- Create a Digital Ocean droplet
+- Create a Digital Ocean project & droplet
 - Create a SSH key
 - Check/Install proper software to droplet
 - Prep project folders & files
@@ -29,3 +29,26 @@
 ![alt text](https://i.imgur.com/sZ6eOsL.png)
 
 ***
+
+## Create a project & droplet with Digital Ocean
+
+1. On the left hand side of the screen click on: + New Project
+2. Fill out the input(Name, Description, Purpose) and click Create Project
+3. If prompted to Move Resources into project, click Skip For Now
+4. Click on the name of your new project on the top left hand side of the control panel
+5. Now click on the Create drop down button on at the very top of your screen(on the right hand-ish side) and select Droplets
+6. Leave the Choose an image option as the default(Ubuntu), scroll down and choose your desired size
+
+##### Default image Ubuntu
+![alt text](https://i.imgur.com/dKIQiAx.png)
+
+7. Next scroll down some more to the Choose a datacenter region section and choose the best location for you
+8. Finally, scroll down a little more to Add your SSH keys and stop here. We will leave this open and finish in in the next section
+
+##### Add your SSH Keys, stopping point
+![alt text](https://i.imgur.com/dKIQiAx.png)
+
+
+
+
+
