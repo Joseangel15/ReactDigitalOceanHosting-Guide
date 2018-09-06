@@ -4,6 +4,7 @@
 ## About
 <details> 
 <summary>A guide for hosting a ReactJS project using Digital Ocean services. In this guide users will learn:</summary> 
+
 - how to find/create an SSH key 
 - prepare your React project for hosting
 - create a Digital Ocean droplet
