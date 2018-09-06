@@ -11,6 +11,9 @@
 - Install npm & add environment variables on droplet
 - Create a build folder
 - Configure pm2
+##### Bonus - Updating & Domain Names
+- How to update content on your live website
+- How to replace your IP address with a domain name
 
 ***
 
@@ -232,8 +235,10 @@ app.get('*', (req, res)=>{
     - Ex) `node server/server.js` -  Use `ls` if you are having trouble. 
 1. Open your browser and enter in your droplets IP address + :YOURPORT 
     - Ex) `138.68.247.223:8000`
+
 ![alt text](https://i.imgur.com/XRyNj9Q.png)
-##### If you have errors you cannot figure out, I recommend double checking the code in your server file(especially the copied code from this guide) and if necessary run `npm run build` over again
+
+##### *If you have errors you cannot figure out, double check the code in your server file and if necessary run `npm run build` over again
 
 ***
 
@@ -254,7 +259,28 @@ app.get('*', (req, res)=>{
     - Stop all instances: `pm2 stop all`
 
 
+***
 
+## Updating your live website
+1. I recommend always starting by making sure your local project works: `npm start` OR `yarn start`
+1. Next make sure your project is saved and everything is up to date on GitHub
+1. Using your terminal, connect to your droplet: `ssh root@YOURIPADDRESS`
+1. If you are not already in, use `ls` and `cd` to navigate to your project folder
+1. Now type in `git status` and there should be no new changes. If there are new changes, skip the next step
+1. If there are no new changes now type: `git fetch` to update with GitHub
+1. Now it should be a commit behind so use `git pull` to pull down the code and even out the commits
+1. Now you can run `npm run build` to create an updated build folder
+1. Make sure to restart pm2: `pm2 restart all` OR `pm2 restart PROJECTID`
+
+##### If you need to change your .env folder, make sure to run `npm run build` so everything is updated
+
+
+***
+
+## Replacing the IP address with a domain name
+##### To use a domain name, you must purchase one
+
+- GoDaddy
 
 
 
