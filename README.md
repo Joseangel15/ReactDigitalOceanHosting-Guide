@@ -137,14 +137,15 @@ swapoff /swapfile
 swapon /swapfile
 ```
 
-## - Install Node:
+## Install Node:
+
 1. Update the software with the commands: `apt-get update && apt-get dist-upgrade`
 1. Install Node using: `apt-get install nodejs -y; apt-get install npm -y;`
 1. Globally install n: `npm i -g n;`
 1. Update to latest stable version: `n stable;`
 1. Install lastest version of Node: `npm i -g npm;`
 
-## - Add Certbot
+## Add Certbot
 
 ##### Helps automate certficates - makes droplet uses https
 
@@ -154,13 +155,13 @@ sudo add-apt-repository ppa:certbot/certbot -y
 sudo apt-get install python-certbot-nginx-y
 ```
 
-## - Install pm2
+## Install pm2
 
 ##### pm2 is a program that keeps your website's server continuously running
 
 1. Type in your terminal: `npm i -g pm2`
 
-## - Install nginx
+## Install nginx
 
 ##### Helps configure what domains and ports match up on your server
 
@@ -170,6 +171,11 @@ sudo apt-get install python-certbot-nginx-y
 
 ***
 
+## Prepare project folder & files
+
+1. When I create a React project, one of the first things I do is remove the *registerServiceWorker()*
+##### If you haven't already, remove any *registerServiceWorker()* and delete the actual service worker file:
+![alt text](https://i.imgur.com/MPbZcxN.png)
 
 
 
