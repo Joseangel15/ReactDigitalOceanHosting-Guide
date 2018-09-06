@@ -261,6 +261,8 @@ app.get('*', (req, res)=>{
 
 ***
 
+# Bonus Content - Update Site/Add Domain Name
+
 ## Updating your live website
 1. I recommend always starting by making sure your local project works: `npm start` OR `yarn start`
 1. Next make sure your project is saved and everything is up to date on GitHub
