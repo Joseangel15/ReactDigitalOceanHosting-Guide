@@ -423,3 +423,16 @@ server {
   }
 
 ```
+
+
+***
+
+
+## Sources
+#### I used a couple guides/websites to help create this project.
+- DevMountain: https://devmountain.com
+    - Provided the Host Helper: https://devmountain.github.io/Host-Helper/
+- Brack Carmony from DevMountain: https://github.com/BrackCarmony
+    - Referenced his guide: https://github.com/DevMountain/Hosting-Digital-Ocean
+- Top5Hosting GoDaddy to Digital Ocean Guide: https://top5hosting.co.uk/blog/uk-hosting/361-connecting-a-godaddy-domain-with-digitalocean-droplet-step-by-step-guide-with-images
+    - Referenced website: https://check-host.net 
