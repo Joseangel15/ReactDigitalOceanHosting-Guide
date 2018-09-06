@@ -1,5 +1,5 @@
-# Guide - React Project Hosting with Digital Ocean
-### Hosting a React website with Digital Ocean
+# Guide - React Project Hosting with Digital Ocean(HTTPS)
+### Hosting a React website(HTTPS) with Digital Ocean
 
 ## About
 <details> 
@@ -52,11 +52,11 @@
 
 ## Create a project & droplet with Digital Ocean
 
-1. On the left hand side of the screen click on: + New Project
+1. On the left-hand side of the screen click on: + New Project
 2. Fill out the input(Name, Description, Purpose) and click Create Project
 3. If prompted to Move Resources into project, click Skip For Now
-4. Click on the name of your new project on the top left hand side of the control panel
-5. Now click on the Create drop down button on at the very top of your screen(on the right hand-ish side) and select Droplets
+4. Click on the name of your new project on the top left-hand side of the control panel
+5. Now click on the Create drop down button on at the very top of your screen(on the right-hand-ish side) and select Droplets
 6. Leave the Choose an image option as the default(Ubuntu), scroll down and choose your desired size
 
 ##### Default image Ubuntu:
@@ -167,7 +167,7 @@ swapon /swapfile
 
 ## Add Certbot
 
-##### Helps automate certficates - makes droplet uses https
+##### Helps automate certficates - makes droplet HTTPS
 
 1. Type in these two commands in order:
 ```
@@ -187,7 +187,7 @@ sudo apt-get install python-certbot-nginx-y
 
 1. Type in the command: `apt-get install nginx -y`
 
-
+### *To exit the droplet press `Ctrl + d`
 
 ***
 
@@ -300,6 +300,13 @@ app.get('*', (req, res)=>{
 ##### To use a domain name, you must purchase one
 
 - GoDaddy
+##### Currently the only hosting company I have used. The others are most likely a similar process.
+
+1. If you do not have one already, log on to Go Daddy and purchase your desired domain name
+1. Make sure to open your browser and log in to your Digital Ocean account
+1. Once on the control panel click on Networking on the right-hand side
+![alt text](https://i.imgur.com/19lzmnZ.png)
+
 
 
 
