@@ -5,14 +5,14 @@
 <details> 
 <summary>A guide for hosting a ReactJS project using Digital Ocean services. In this guide users will learn:</summary> 
 
-- how to find/create an SSH key 
-- prepare your React project for hosting
-- create a Digital Ocean droplet
-- connect to and access the droplet
-- how to install node in your droplet for a server
-- how to install pm2 in your droplet to let your server run automatically
-- create and edit environment variables on the drople
-- create a virtual projects and build folder to run as your hosted site
+    - how to find/create an SSH key 
+    - prepare your React project for hosting
+    - create a Digital Ocean droplet
+    - connect to and access the droplet
+    - how to install node in your droplet for a server
+    - how to install pm2 in your droplet to let your server run automatically
+    - create and edit environment variables on the drople
+    - create a virtual projects and build folder to run as your hosted site
 
 - As a Bonus Section I will continue to add relevant content. Currently I have add *How to Update Your Live Website* and I am working on *Adding a Domain Name to Your Website*.
 </details>
