@@ -147,9 +147,10 @@ ssh root@YOURIPADDRESSHERE
 ```
 1. Enter your password when prompted
 1. Now we will install the needed software which can be done in very quickly one step() or you can follow along with the *breakdown*
+1. Start out my making sure everything is updated: `sudo apt-get update`
 1. For a quick copy and paste:
 ```
-touch /swapfile;fallocate -l 1G /swapfile;chmod 600 /swapfile;mkswap /swapfile;swapon /swapfile;sudo add-apt-repository ppa:certbot/certbot -y;apt-get update -y && apt-get dist-upgrade -y; sudo apt-get install python-certbot-nginx -y; apt-get install nodejs -y;apt-get install npm -y;npm i -g n;n stable;npm i -g npm;npm i -g pm2;apt-get install nginx -y;npm i -g yarn;
+touch /swapfile;fallocate -l 1G /swapfile;chmod 600 /swapfile;mkswap /swapfile;swapon /swapfile;sudo add-apt-repository ppa:certbot/certbot -y;apt-get update -y && apt-get dist-upgrade -y; sudo apt-get install python-certbot-nginx -y; apt-get install nodejs -y;apt-get install npm -y;npm i -g n;n stable;npm i -g npm;npm i -g pm2;apt-get install nginx -y;npm i -g yarn;apt-get install git;
 ```
 
 1. To follow the *breakdown*:
@@ -291,7 +292,7 @@ app.get('*', (req, res)=>{
     - Restart all instances: `pm2 restart all`
     - Restart a specific instance: `pm 2 restart PROJECTID`
     - Display all instances: `pm2 list`
-    - Stop all instances: `pm2 stop all`
+    - Stop all instances: `pm2 stop all`I
 
 
 ***
